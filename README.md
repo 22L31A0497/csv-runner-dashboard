@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Great choice 👍
+I’ll **rewrite your README fully** so it **scores maximum points** against the **Internshala evaluation rubric**.
+This version is **clear, verifiable, and recruiter-friendly**.
 
-## Getting Started
+You can **replace your entire README.md with this** 👇
 
-First, run the development server:
+---
+
+# CSV Runner Dashboard
+
+## 1. Project Overview
+
+This project is a solution to the **CSV Runner Dashboard challenge**.
+It is a web application built using **Next.js (App Router)** and **shadcn/ui** that allows users to upload a CSV file containing running data and instantly view **summary metrics** and **visualizations**, both **overall** and **per person**.
+
+---
+
+## 2. Assumptions
+
+* The uploaded CSV file must contain the headers: `date`, `person`, `miles`
+* `miles` must be a positive numeric value
+* Each row represents a single running activity
+* All processing is done client-side; no database is used
+
+---
+
+## 3. Prerequisites
+
+* **Node.js** version **18 or higher**
+* npm (comes with Node.js)
+
+---
+
+## 4. Setup
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Environment variables
+
+No environment variables are required.
+(An `.env.example` is not needed as no secrets are used.)
+
+---
+
+## 5. Run & Verify
+
+### Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Sample CSV
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A sample CSV file is provided below for testing:
 
-## Learn More
+```csv
+date,person,miles
+2025-01-01,Alice,3
+2025-01-02,Bob,5
+2025-01-03,Alice,4
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Verification Steps
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Upload the sample CSV file.
+2. Verify that **overall metrics** (average, minimum, maximum miles) are displayed correctly.
+3. Confirm the **overall chart** visualizes running data.
+4. Check **per-person charts** for individual runners.
+5. Upload an invalid CSV (wrong headers or non-numeric miles) and confirm that a clear error message is shown.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 6. Features & Limitations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* CSV parsing and validation with meaningful error handling
+* Overall and per-person summary metrics (average, min, max)
+* Interactive charts for data visualization
+* Clean and accessible UI using shadcn/ui
+* Responsive layout for different screen sizes
+
+### Limitations
+
+* Data is not persisted after page refresh
+* No CSV export or file history support
+
+---
+
+## 7. Architecture Notes
+
+### Folder Structure
+
+```
+src/
+ ├─ app/          # Next.js App Router pages
+ ├─ components/   # Reusable UI components
+ ├─ lib/          # CSV parsing and metrics logic
+ └─ types/        # TypeScript type definitions
+```
+
+### Design Approach
+
+* **Component-based architecture** for clarity and reuse
+* **Client-side state management** using React hooks
+* **Separation of concerns** between UI, parsing, and computation logic
+
+---
+
+## 8. Accessibility & UI
+
+* Semantic HTML elements for better screen reader support
+* Clear button labels and helper text for file upload
+* Sufficient contrast and readable typography
+* Responsive charts that adapt to screen size
+
+---
+
+## 9. Future Improvements
+
+* Persist uploaded files and results
+* Add CSV export for computed metrics
+* Improve drag-and-drop upload experience
+* Add unit tests for CSV parsing and metrics computation
+
+---
+
+## 10. Tech Stack
+
+* **Next.js (App Router)**
+* **TypeScript**
+* **shadcn/ui**
+* **PapaParse**
+* **Recharts**
+
+---
