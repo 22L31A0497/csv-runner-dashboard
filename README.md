@@ -1,11 +1,3 @@
-Great choice 👍
-I’ll **rewrite your README fully** so it **scores maximum points** against the **Internshala evaluation rubric**.
-This version is **clear, verifiable, and recruiter-friendly**.
-
-You can **replace your entire README.md with this** 👇
-
----
-
 # CSV Runner Dashboard
 
 ## 1. Project Overview
