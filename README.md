@@ -1,6 +1,6 @@
-# CSV Runner Dashboard
+bh# CSV Runner Dashboard
 
-## 1. Project Overview
+## 1. Project Overview 
 
 This project is a solution to the **CSV Runner Dashboard challenge**.
 It is a web application built using **Next.js (App Router)** and **shadcn/ui** that allows users to upload a CSV file containing running data and instantly view **summary metrics** and **visualizations**, both **overall** and **per person**.
